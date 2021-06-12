@@ -1,0 +1,106 @@
+body {
+  padding-bottom: 20px;
+  background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.5)),url(../img/bg.jpg);
+  background-repeat:no-repeat;
+  background-attachment:fixed; background-size:cover;
+  background-position:center;   
+}
+h1 {
+  font-size:15px; 
+  font-weight:bold; 
+  font-family:"Maiandra GD"; 
+  text-align:center; 
+  letter-spacing:2px;
+  word-spacing:4px; 
+  color:rgba(59, 59, 59, 0.849); 
+  margin-left: 29%;
+  margin-top:7em;
+}
+svg {
+  position: relative;left: 45% ;bottom: 77%
+}
+
+fieldset {
+  border: 4px double #044f8bce; 
+  border-radius:20px; 
+  background:rgba(0,0,0,.5); 
+  padding:20px 30px 20px 30px;
+  width: 30%;
+  margin-left: 50%;
+}
+label {
+  font:normal normal normal 20px "segoe print";
+  color: #034174ce; 
+}
+.c {
+  height: 27px;
+  width:100%; 
+  font-style: italic;
+  background:rgba(0,0,0,.4); 
+  border-radius:30px; 
+  color:rgb(200,200,200);
+  padding:5px 0px 10px 14px
+} 
+.c:hover {
+  border-color: rgba(192, 192, 192, 0.678);
+  background-color: rgba(0,0,0,0.3);
+}
+#bt{
+  width:100%; 
+  background:rgba(0,0,0,.4); 
+  border-radius:30px; 
+  color:rgb(200,200,200);
+  font-family: serif;
+  letter-spacing: 2px;
+}
+#bt:hover{
+  letter-spacing: 6px;
+  background-color: #00509223;
+  transition: 0.3s;
+  color: black;
+  border-color: silver;
+}
+.placeholder {
+  text-align:center;
+  font-family:'Times New Roman', Times, serif;
+  letter-spacing: 2px;
+}
+.navbar-brand{
+  font-size: 30px;
+}
+.navbar-brand:hover{
+  letter-spacing: 4px;
+  transition: 0.5s;
+}
+.navbar {
+    width: 100%;
+    margin-bottom: 20px;
+    position: fixed;
+    top: 0%;
+}
+button:hover {
+    background-color: rgba(87, 84, 84, 0.4);
+    transition: 0.5s;
+}
+#search:hover{
+  background-color: rgba(87, 84, 84, 0.4);
+  transition: 0.5s;
+}
+#tcc{
+  font-style: italic;
+  color: darkcyan;
+}
+.dropdown-item:hover{
+  background-color:  rgba(0, 139, 139, 0.397);
+  border-radius: 10px;
+}
+hr{
+  color: black;
+}
+#footer {
+  margin-top: 10em;
+  height: 40px;
+}
+.o{
+  color: darkcyan;
+}

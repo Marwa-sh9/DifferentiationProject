@@ -1,0 +1,63 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LogInAdmin.aspx.cs" Inherits="Differentiation.LogInAdmin" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>LogIn</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+<%--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">--%>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous"/>
+    <link href="Design/LogIn/StyleSheet1.css" rel="stylesheet"/>
+    <link href="Design/LogIn/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="Design/LogIn/js/bootstrap.min.js"></script>
+</head>
+<body style="background-image:url(Design/LogIn/L.png);background-attachment:fixed;background-size:1540px 850px;
+             background-repeat:no-repeat;background-position:center;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div id="div1" class="container-fluid">
+    <a class="navbar-brand" href="#">Home</a>
+      <ul class="navbar-nav me-auto mb-2 mb-auto">
+        <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">LogIn</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    <img id="img" src="Design/LogIn/vec.jpg" />
+    <form class="form1" runat="server" style="background-color:white;"> 
+        
+        <div class="form-group">
+          <label for="exampleInputEmail1" class="l1">Email Address:</label>
+            <br />
+          <asp:TextBox class="form-control col-lg-10" ID ="email1" runat="server"  aria-describedby="emailHelp" placeholder="Enter Email"></asp:TextBox>
+            
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+<%--         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="email1" ErrorMessage="Email is required" ForeColor="Red"></asp:RequiredFieldValidator>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="email1" ErrorMessage="RegularExpressionValidator" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">
+        </asp:RegularExpressionValidator>--%>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1" class="l1">Password:</label>
+            <br/>
+          <asp:TextBox class="form-control col-lg-10" ID="pass" runat="server" type="password"  placeholder="Password"></asp:TextBox>
+<%--            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="pass" ErrorMessage=" password is Required" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+            <br />
+        </div>
+        <br />
+    <asp:Button ID="login" runat="server" class="btn btn-primary btn-outline-info btn-lg col-lg-10 btn-block" Text="Log In" OnClick="Login_click" Width="310px" Height="50px" />
+        <br />
+    </form>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+

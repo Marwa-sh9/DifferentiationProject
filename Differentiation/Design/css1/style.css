@@ -1,0 +1,73 @@
+body
+{
+    background-image: url(../img/back3.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+label{
+    color: black;
+    font-style: italic;
+    font-weight: bold;
+}
+form {
+    margin: 100px;
+    text-align: center;
+}
+#inputEmail4 
+{
+    border-radius: 250px;
+    border: 2px solid #609;
+    padding: 20px;
+    width: 500px;
+    height: 15px;
+}
+#inputState {
+    border-radius: 25px;
+    border: 2px solid #609;
+    padding: 20px;
+    width: 500px;
+    height: 15px;
+}
+#inputCity {
+    border-radius: 25px;
+    border: 2px solid #609;
+    padding: 20px;
+    width: 500px;
+    height: 15px;
+}
+#inputAddress {
+    border-radius: 25px;
+    border: 2px solid #609;
+    padding: 20px;
+    width: 1085px;
+    height: 15px;
+}
+#inputPassword4 {
+    border-radius: 25px;
+    border: 2px solid #609;
+    padding: 20px;
+    width: 500px;
+    height: 15px;
+}
+#Button1 {
+    border-radius: 25px;
+    border: 2px solid #609;  
+    width: 200px;
+    height: 50px;
+}
+#Button2 {
+    border-radius: 25px;
+    border: 2px solid #609;
+    }
+#Button3 {
+    border-radius: 25px;
+    border: 2px solid #609;
+    width: 200px;
+    height: 50px;
+}
+#Button4{
+    border-radius: 25px;
+    border: 2px solid #609;
+    width: 200px;
+    height: 50px;
+}
