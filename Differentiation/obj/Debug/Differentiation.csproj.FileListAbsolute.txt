@@ -1,0 +1,277 @@
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\Differentiation.dll.config
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\Differentiation.dll
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\Differentiation.pdb
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\roslyn\csc.exe
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\roslyn\csc.exe.config
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\roslyn\csc.rsp
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\roslyn\csi.exe
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\roslyn\csi.rsp
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\roslyn\System.AppContext.dll
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\roslyn\vbc.exe
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\roslyn\vbc.exe.config
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\roslyn\vbc.rsp
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\roslyn\VBCSCompiler.exe
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\obj\Debug\Differentiation.csprojAssemblyReference.cache
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\obj\Debug\Differentiation.csproj.CopyComplete
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\obj\Debug\Differentiation.dll
+C:\Users\lenovo\source\repos\Differentiation\Differentiation\obj\Debug\Differentiation.pdb
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\Differentiation.dll.config
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\Differentiation.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\Differentiation.pdb
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\roslyn\csc.exe
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\roslyn\csc.exe.config
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\roslyn\csc.rsp
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\roslyn\csi.exe
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\roslyn\csi.rsp
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\roslyn\System.AppContext.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\roslyn\vbc.exe
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\roslyn\vbc.exe.config
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\roslyn\vbc.rsp
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\roslyn\VBCSCompiler.exe
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\obj\Debug\Differentiation.csprojResolveAssemblyReference.cache
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\obj\Debug\Differentiation.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\مفاضلة\مفاضلة\Differentiation\Differentiation\obj\Debug\Differentiation.pdb
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\obj\Debug\Differentiation.csprojResolveAssemblyReference.cache
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\obj\Debug\Differentiation.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\obj\Debug\Differentiation.pdb
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\Differentiation.dll.config
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\Differentiation.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\Differentiation.pdb
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\roslyn\csc.exe
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\roslyn\csc.exe.config
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\roslyn\csc.rsp
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\roslyn\csi.exe
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\roslyn\csi.rsp
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\roslyn\System.AppContext.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\roslyn\vbc.exe
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\roslyn\vbc.exe.config
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\roslyn\vbc.rsp
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\roslyn\VBCSCompiler.exe
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Ammar\Downloads\Telegram Desktop\mo\mo\Differentiation\Differentiation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\Differentiation.dll.config
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\Differentiation.dll
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\Differentiation.pdb
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\roslyn\csc.exe
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\roslyn\csc.exe.config
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\roslyn\csc.rsp
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\roslyn\csi.exe
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\roslyn\csi.rsp
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\roslyn\System.AppContext.dll
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\roslyn\vbc.exe
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\roslyn\vbc.exe.config
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\roslyn\vbc.rsp
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\roslyn\VBCSCompiler.exe
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\obj\Debug\Differentiation.csprojAssemblyReference.cache
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\obj\Debug\Differentiation.csproj.CopyComplete
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\obj\Debug\Differentiation.dll
+C:\Users\lenovo\Desktop\Differentiation\Differentiation\obj\Debug\Differentiation.pdb
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\Differentiation.dll.config
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\Differentiation.dll
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\Differentiation.pdb
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\roslyn\csc.exe
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\roslyn\csc.exe.config
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\roslyn\csc.rsp
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\roslyn\csi.exe
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\roslyn\csi.rsp
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\roslyn\System.AppContext.dll
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\roslyn\vbc.exe
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\roslyn\vbc.exe.config
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\roslyn\vbc.rsp
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\roslyn\VBCSCompiler.exe
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\obj\Debug\Differentiation.csprojResolveAssemblyReference.cache
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\obj\Debug\Differentiation.dll
+C:\Users\Marwa\Desktop\Differentiation\Differentiation\obj\Debug\Differentiation.pdb
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\Differentiation.dll.config
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\Differentiation.dll
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\Differentiation.pdb
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\roslyn\csc.exe
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\roslyn\csc.exe.config
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\roslyn\csc.rsp
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\roslyn\csi.exe
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\roslyn\csi.rsp
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\roslyn\System.AppContext.dll
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\roslyn\vbc.exe
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\roslyn\vbc.exe.config
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\roslyn\vbc.rsp
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\roslyn\VBCSCompiler.exe
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\obj\Debug\Differentiation.csprojAssemblyReference.cache
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\obj\Debug\Differentiation.csproj.CopyComplete
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\obj\Debug\Differentiation.dll
+C:\Users\lenovo\Desktop\For Testing\Differentiation(1)\Differentiation\Differentiation\obj\Debug\Differentiation.pdb
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\Differentiation.dll.config
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\Differentiation.dll
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\Differentiation.pdb
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\roslyn\csc.exe
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\roslyn\csc.exe.config
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\roslyn\csc.rsp
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\roslyn\csi.exe
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\roslyn\csi.rsp
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\roslyn\System.AppContext.dll
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\roslyn\vbc.exe
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\roslyn\vbc.exe.config
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\roslyn\vbc.rsp
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\roslyn\VBCSCompiler.exe
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\obj\Debug\Differentiation.csprojResolveAssemblyReference.cache
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\obj\Debug\Differentiation.dll
+C:\Users\Marwa\Desktop\New folder\Differentiation\Differentiation\obj\Debug\Differentiation.pdb
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\Differentiation.dll.config
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\Differentiation.dll
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\Differentiation.pdb
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\roslyn\csc.exe
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\roslyn\csc.exe.config
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\roslyn\csc.rsp
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\roslyn\csi.exe
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\roslyn\csi.rsp
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\roslyn\System.AppContext.dll
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\roslyn\vbc.exe
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\roslyn\vbc.exe.config
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\roslyn\vbc.rsp
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\roslyn\VBCSCompiler.exe
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\obj\Debug\Differentiation.csprojAssemblyReference.cache
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\obj\Debug\Differentiation.csproj.CoreCompileInputs.cache
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\obj\Debug\Differentiation.csproj.CopyComplete
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\obj\Debug\Differentiation.dll
+C:\Users\Ayman_Alaswad\Desktop\المشروع\Differentiation\Differentiation\obj\Debug\Differentiation.pdb
