@@ -25,8 +25,10 @@ namespace Differentiation
         public bool DesiresEmpty()
         {
             int count = 1;
+            long stdId = long.Parse(Session["id"].ToString());
             string conString = ConfigurationManager.ConnectionStrings["University1"].ConnectionString;
-            SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Desires");
+            SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Desires Where Id_Number =@id");
+            cmd.Parameters.Add(new SqlParameter("id", stdId));
             using (SqlConnection con = new SqlConnection(conString))
             {
                 cmd.Connection = con;
@@ -56,6 +58,8 @@ namespace Differentiation
         }
         protected void grid()
         {
+            //long stdId = long.Parse(Session["id"].ToString());
+
             con.Open();
             SqlDataAdapter ds = new SqlDataAdapter(
                 "select Factuly.Factuly_Id, Factuly.Factuly_Name, " +
@@ -120,31 +124,28 @@ namespace Differentiation
                     dt = createtable();
             //if (dt.Rows.Count == 5)
             //    return;
-            if (DesiresEmpty() == false)
+
+            for (int i = 0; i < GridView1.Rows.Count; i++)
             {
-
-                for (int i = 0; i < GridView1.Rows.Count; i++)
+                CheckBox chk = (CheckBox)GridView1.Rows[i].Cells[0].FindControl("ChkSelect");
+                if (chk.Checked)
                 {
-                    CheckBox chk = (CheckBox)GridView1.Rows[i].Cells[0].FindControl("ChkSelect");
-                    if (chk.Checked)
-                    {
-                        dt = AddRow(GridView1.Rows[i], dt);
-                        //AddToDataBase.Enabled = true;
+                    dt = AddRow(GridView1.Rows[i], dt);
+                    //AddToDataBase.Enabled = true;
 
-                    }
-                    else
-                    {
-                        dt = remove(GridView1.Rows[i], dt);
-                        AddToDataBase.Enabled = true;
-                    }
+                }
+                else
+                {
+                    dt = remove(GridView1.Rows[i], dt);
+                    AddToDataBase.Enabled = true;
                 }
             }
-            else
-            {
-                ViewState["GetRecords"] = dt;                        
-                //GridView1.Enabled = false;
+
+            if (dt.Rows.Count == 5)
                 AddToDataBase.Enabled = false;
-            }
+
+            ViewState["GetRecords"] = dt;                        
+
 
         }
         protected void AddToDataBase_Click1(object sender, EventArgs e)
