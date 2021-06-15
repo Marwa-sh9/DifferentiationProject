@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
@@ -16,6 +11,10 @@ namespace Differentiation
         {
             if (!IsPostBack)
             {
+                if (ECUD.Time() == false)
+                {
+                    Response.Redirect("~/default.aspx");
+                }
                 Disable();
             }
 
@@ -23,7 +22,27 @@ namespace Differentiation
         SqlConnection con = null;
         SqlCommand cmd = null;
         string conStr;
-
+        public bool EmailExist()
+        {
+            conStr = ConfigurationManager.ConnectionStrings["University1"].ConnectionString;
+            SqlDataAdapter sda = null;
+            DataTable Dt = new DataTable();
+            con = new SqlConnection(conStr);
+            cmd = new SqlCommand("Select Email FROM Student_Imported_Data WHERE Email =@txtStuEmail", con);
+            con.Open();
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@txtStuEmail", SqlDbType.VarChar).Value = txtStuEmail.Text;
+            sda = new SqlDataAdapter(cmd);
+            sda.Fill(Dt);
+            if (Dt.Rows.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         void Disable()
         {
             txtStuEmail.Enabled = false;
@@ -32,7 +51,6 @@ namespace Differentiation
             btnRegister.Enabled = false;
             lblStuValid.Text = null;
         }
-
         void Enable()
         {
             txtStuEmail.Enabled = true;
@@ -40,7 +58,6 @@ namespace Differentiation
             txtStuRePass.Enabled = true;
             btnRegister.Enabled = true;
         }
-
         public bool IDNumberValidation()
         {
             conStr = ConfigurationManager.ConnectionStrings["University1"].ConnectionString;
@@ -86,33 +103,39 @@ namespace Differentiation
                 return false;
             }
         }
-
         protected void btnRegister_Click(object sender, EventArgs e)
         {
             if (txtStuPass.Text == txtStuRePass.Text)
             {
-                conStr = ConfigurationManager.ConnectionStrings["University1"].ConnectionString;
-                con = new SqlConnection(conStr);
-                SqlCommand cmd = new SqlCommand("Student_Insert", con);
-                con.Open();
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@ID_Number", txtID_Number.Text);
-                cmd.Parameters.AddWithValue("@Email", txtStuEmail.Text);
-                cmd.Parameters.AddWithValue("@Password", txtStuPass.Text);
-                int i = cmd.ExecuteNonQuery();
-                con.Close();
-                if (i > 0)
+                if (EmailExist() == false)
                 {
-                    Response.Write("<script> alert('Registered Sucessfully'); </script>");
-                    Response.Redirect("~/LogIn.aspx");
+                    conStr = ConfigurationManager.ConnectionStrings["University1"].ConnectionString;
+                    con = new SqlConnection(conStr);
+                    SqlCommand cmd = new SqlCommand("Student_Insert", con);
+                    con.Open();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@ID_Number", txtID_Number.Text);
+                    cmd.Parameters.AddWithValue("@Email", txtStuEmail.Text);
+                    cmd.Parameters.AddWithValue("@Password", txtStuPass.Text);
+                    int i = cmd.ExecuteNonQuery();
+                    con.Close();
+                    if (i > 0)
+                    {
+                        Response.Write("<script> alert('Registered Sucessfully'); </script>");
+                        Response.Redirect("~/LogIn.aspx");
+                    }
+                    else
+                    {
+                        Response.Write("<script> alert('Retype The Password'); </script>");
+                    }
+                }
+                else
+                {
+                    Response.Write("<script> alert('Email already exists... Try Again!'); </script>");
+                    Enable();
                 }
             }
-            else
-            {
-                Response.Write("<script> alert('Retype The Password'); </script>");
-            }
         }
-
         protected void btnCheck_Click(object sender, EventArgs e)
         {
             if (IDNumberValidation() == true && IPONumberValidation() == true)
@@ -128,4 +151,5 @@ namespace Differentiation
             }
         }
     }
+
 }

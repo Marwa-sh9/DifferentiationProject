@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 using Differentiation.DAL;
-using System.Data.SqlClient;
-using System.Configuration;
-using System.Data;
 
 namespace Differentiation
 {
@@ -18,50 +11,47 @@ namespace Differentiation
         {
             if (!IsPostBack)
             {
-                BindGridViewData();
+                //اذا كانت الجلسة فارغة
+                if (Session["id"] == null)
+                {
+                    Response.Redirect("~/login.aspx");
+                }
+                BindGridGetAllDesires();
                 StdData();
             }
         }
+        //استدعاء ميثود جلب بيانات الطالب المراد عرضه من الصف
         protected void StdData()
         {
-            if (Session["id"] == null)
-            {
-                Response.Redirect("~/login.aspx");
-            }
-
             long stdId = long.Parse(Session["id"].ToString());
             GridView2.DataSource = ECUD.GetAllStdData(stdId);
             GridView2.DataBind();
         }
-        public void BindGridViewData()
+        //استدعاء جميع الرغبات المححفوظة
+        public void BindGridGetAllDesires()
         {
-            if (Session["id"] == null)
-            {
-                Response.Redirect("~/login.aspx");
-            }
             long stdId = long.Parse(Session["id"].ToString());
             GridView1.DataSource = ECUD.GetAllDesires(stdId);
             GridView1.DataBind();
         }
+        //حدث في الكريد فيو عند التغيير للتعديل والحذف والحفظ والغاء الحفظ
         protected void GridView1_RowCommand1(object sender, GridViewCommandEventArgs e)
         {
             if (e.CommandName == "EditRow")
             {
                 int rowIndex = ((GridViewRow)((Button)e.CommandSource).NamingContainer).RowIndex;
                 GridView1.EditIndex = rowIndex;
-                BindGridViewData();
+                BindGridGetAllDesires();
             }
             else if (e.CommandName == "DeleteRow")
             {
                 ECUD.Delete(Convert.ToInt32(e.CommandArgument));
-                BindGridViewData();
-
+                BindGridGetAllDesires();
             }
             else if (e.CommandName == "CancelRow")
             {
                 GridView1.EditIndex = -1;
-
-                BindGridViewData();
+                BindGridGetAllDesires();
 
             }
             else if (e.CommandName == "UpdateRow")
@@ -69,11 +59,9 @@ namespace Differentiation
                 int rowIndex = ((GridViewRow)((Button)e.CommandSource).NamingContainer).RowIndex;
                 int Factuly_Id = Convert.ToInt32(e.CommandArgument);
                 string Desired_Idd = ((DropDownList)GridView1.Rows[rowIndex].FindControl("drp1")).SelectedValue;
-
                 ECUD.Update(Factuly_Id, Desired_Idd);
-
                 GridView1.EditIndex = -1;
-                BindGridViewData();
+                BindGridGetAllDesires();
 
             }
         }
@@ -82,13 +70,12 @@ namespace Differentiation
             Response.Redirect("~/FactulyAdd.aspx");
 
         }
-        protected void repeater()
+        protected void Logout_Click(object sender, EventArgs e)
         {
-
-            //foreach (GridViewRow gr in GridView1.Rows)
-            //{
-
-            //}
+            Int64? sessionId = Convert.ToInt64(Session["id"]);
+            sessionId = null;
+            Response.Redirect("~/default.aspx");
+        
         }
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
@@ -107,13 +94,8 @@ namespace Differentiation
 
         protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
+
         }
 
-        protected void logout_Click1(object sender, EventArgs e)
-        {
-            Int64? sessionId = Convert.ToInt64(Session["id"]);
-            sessionId = null;
-            Response.Redirect("~/LogIn.aspx");
-        }
     }
 }

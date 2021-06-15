@@ -1,0 +1,24 @@
+﻿.navbar-brand {
+    margin-left: 20px;
+    font-family: 'Akaya Telivigala', cursive;
+}
+
+    .navbar-brand:hover {
+        color: deepskyblue !important;
+        transition: 0.5s;
+    }
+
+#n1 {
+    margin-top: 10px;
+    font-style: italic;
+    font-weight: bolder;
+    color: rgb(184, 187, 192);
+    font-size: large;
+    margin-left: 20px;
+}
+
+    #n1:hover {
+        color: red !important;
+        border: none !important;
+        transition: 0.5s;
+    }

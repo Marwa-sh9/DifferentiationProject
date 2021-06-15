@@ -1,17 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.IO;
 using Microsoft.VisualBasic.FileIO;
-//using System.Data.OleDb;
-//using System.Data.Common;
-
 
 namespace Differentiation
 {
@@ -19,10 +12,10 @@ namespace Differentiation
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-        //    //long stdId = long.Parse(Session["id"].ToString());
-        //    var isAdmin = bool.Parse(Session["isAdmin"].ToString());
-        //    if (!isAdmin || Session["id"] == null)
-        //        Response.Redirect("~/LogIn.aspx");
+          //  long Id = long.Parse(Session["id"].ToString());
+            // var isAdmin = bool.Parse(Session["isAdmin"].ToString());
+            if ( Session["id"] == null)
+                Response.Redirect("~/LogIn.aspx");
 
         }
 
@@ -65,7 +58,7 @@ namespace Differentiation
                 new DataColumn("Arabic",typeof(int)),//6
                 new DataColumn("[National]",typeof(int)),//7
                 new DataColumn("Religious",typeof(int)),//8
-                new DataColumn("Sciences",typeof(int)),//9
+                new DataColumn("Science",typeof(int)),//9
                 new DataColumn("Mark_Total",typeof(int)),//10
                 new DataColumn("ID_Number",typeof(Int64)),//11
 
@@ -217,7 +210,7 @@ namespace Differentiation
             if (FileEx.ToLower() == ".csv")
             {
                 DataTable dt = new DataTable();
-                dt.Columns.AddRange(new DataColumn[14] {
+                dt.Columns.AddRange(new DataColumn[13] {
                     new DataColumn("ID_Number", typeof(long)),//0
                     new DataColumn("IPO_Number", typeof(int)),//1
                     new DataColumn("Student_Full_Name",typeof(string)),//2
@@ -226,7 +219,6 @@ namespace Differentiation
                     new DataColumn("Date_Of_Birth",typeof(string)),//5
                     new DataColumn("Student_Nationality",typeof(string)),//6
                     new DataColumn("year",typeof(int)),//7
-                    new DataColumn("Seesion",typeof(int)),//8
                     new DataColumn("Source",typeof(string)),//9
                     new DataColumn("Address",typeof(string)),//10
                     new DataColumn("Phone",typeof(string)),//11
@@ -253,7 +245,7 @@ namespace Differentiation
                         {
                             string[] fieldData = textFieldParser.ReadFields();
                             //Making empty value as null
-                                for (int i = 0; i < fieldData.Length; i++)
+                            for (int i = 0; i < fieldData.Length; i++)
                             {
                                 if (fieldData[i] == "")
                                 {
@@ -303,6 +295,17 @@ namespace Differentiation
 
         protected void Statistics_Click1(object sender, EventArgs e)
         {
+            string conStr;
+            conStr = ConfigurationManager.ConnectionStrings["University1"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = "test";
+                cmd.CommandType = CommandType.StoredProcedure;
+                con.Close();
+            }
 
         }
 
@@ -310,22 +313,9 @@ namespace Differentiation
         {
             Int64? sessionId = Convert.ToInt64(Session["id"]);
             sessionId = null;
-            Response.Redirect("~/default.aspx.aspx");
+            Response.Redirect("~/default.aspx");
         }
 
-        protected void btnMarquee_Click1(object sender, EventArgs e)
-        {
-            Response.Redirect("WebForm1.aspx?News=" + txtMarquee.Text.ToString().Replace("\n", ""));
-        }
 
-        protected void open_Click1(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void close_Click1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

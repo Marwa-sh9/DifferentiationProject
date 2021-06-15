@@ -71,14 +71,13 @@
   <ItemGroup>
     <Content Include="AddStudentData.aspx" />
     <Content Include="default.aspx" />
+    <Content Include="Design\AddStudentData\StyleSheet1.css" />
     <Content Include="Design\Content\bootstrap-theme.css" />
     <Content Include="Design\Content\bootstrap-theme.min.css" />
     <Content Include="Design\Content\bootstrap.css" />
     <Content Include="Design\Content\bootstrap.min.css" />
     <Content Include="Design\Content\Site.css" />
-    <Content Include="Design\css\bootstrap-icons.css" />
-    <Content Include="Design\css\bootstrap.css" />
-    <Content Include="Design\css\Text.css" />
+    <Content Include="Design\FactulyAdd\StyleSheet1.css" />
     <Content Include="Design\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Design\Home\code.txt" />
     <Content Include="Design\Home\HP.css" />
@@ -114,6 +113,51 @@
     <Content Include="Design\LogIn\L.png" />
     <Content Include="Design\LogIn\StyleSheet1.css" />
     <Content Include="Design\LogIn\vec.jpg" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap-grid.css" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap-grid.min.css" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap-grid.rtl.css" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap-reboot.css" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap-reboot.min.css" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap-reboot.rtl.css" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap-utilities.css" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap-utilities.min.css" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap-utilities.rtl.css" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap.css" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap.min.css" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap.rtl.css" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap.rtl.min.css" />
+    <Content Include="Design\New Log In\LogIn\js\bootstrap.bundle.js" />
+    <Content Include="Design\New Log In\LogIn\js\bootstrap.bundle.min.js" />
+    <Content Include="Design\New Log In\LogIn\js\bootstrap.esm.js" />
+    <Content Include="Design\New Log In\LogIn\js\bootstrap.esm.min.js" />
+    <Content Include="Design\New Log In\LogIn\js\bootstrap.js" />
+    <Content Include="Design\New Log In\LogIn\js\bootstrap.min.js" />
+    <Content Include="Design\New Log In\LogIn\k.css" />
+    <Content Include="Design\New Log In\LogIn\k.html" />
+    <Content Include="Design\New Log In\LogIn\L.png" />
+    <Content Include="Design\New Log In\LogIn\StyleSheet2.css" />
+    <Content Include="Design\New Log In\LogIn\vec.jpg" />
+    <Content Include="Design\New Log In\مستند نصي جديد.txt" />
+    <Content Include="Design\Reg New\js1\bootstrap.bundle.js" />
+    <Content Include="Design\Reg New\js1\bootstrap.bundle.min.js" />
+    <Content Include="Design\Reg New\js1\bootstrap.esm.js" />
+    <Content Include="Design\Reg New\js1\bootstrap.esm.min.js" />
+    <Content Include="Design\Reg New\js1\bootstrap.js" />
+    <Content Include="Design\Reg New\js1\bootstrap.min.js" />
+    <Content Include="Design\Reg New\js1\jquery-1.11.1.min.js" />
+    <Content Include="Design\Reg New\js1\npm.js" />
+    <Content Include="Design\Reg New\js\bootstrap.js" />
+    <Content Include="Design\Reg New\js\bootstrap.min.js" />
+    <Content Include="Design\Reg New\js\jquery-1.11.1.min.js" />
+    <Content Include="Design\Reg New\js\npm.js" />
+    <Content Include="Design\Reg New\o.jpg" />
+    <Content Include="Design\Reg New\StyleSheet2.css" />
+    <Content Include="Design\Reg New\V.png" />
+    <Content Include="Design\Reg New\v2.jpg" />
+    <Content Include="Design\Reg New\vv.png" />
     <Content Include="Design\Reg\js1\bootstrap.bundle.js" />
     <Content Include="Design\Reg\js1\bootstrap.bundle.min.js" />
     <Content Include="Design\Reg\js1\bootstrap.esm.js" />
@@ -126,7 +170,11 @@
     <Content Include="Design\Reg\js\bootstrap.min.js" />
     <Content Include="Design\Reg\js\jquery-1.11.1.min.js" />
     <Content Include="Design\Reg\js\npm.js" />
+    <Content Include="Design\Reg\reg.png" />
     <Content Include="Design\Reg\StyleReg.css" />
+    <Content Include="Design\Reg\StyleSheet2.css" />
+    <Content Include="Design\Reg\V.png" />
+    <Content Include="Design\ShowDesired\StyleSheet1.css" />
     <Content Include="FactulyAdd.aspx" />
     <Content Include="Global.asax" />
     <Content Include="LogIn.aspx" />
@@ -135,7 +183,6 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddStudentData.aspx.cs">
@@ -186,13 +233,6 @@
     <Compile Include="ShowDesired.aspx.designer.cs">
       <DependentUpon>ShowDesired.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Design\Content\bootstrap-theme.css.map" />
@@ -231,7 +271,38 @@
     <Content Include="Design\Reg\js1\bootstrap.esm.min.js.map" />
     <Content Include="Design\Reg\js1\bootstrap.js.map" />
     <Content Include="Design\Reg\js1\bootstrap.min.js.map" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap-grid.css.map" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap-grid.min.css.map" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap-reboot.css.map" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap-utilities.css.map" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap-utilities.min.css.map" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap.css.map" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap.min.css.map" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap.rtl.css.map" />
+    <Content Include="Design\New Log In\LogIn\css\bootstrap.rtl.min.css.map" />
+    <Content Include="Design\New Log In\LogIn\js\bootstrap.bundle.js.map" />
+    <Content Include="Design\New Log In\LogIn\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Design\New Log In\LogIn\js\bootstrap.esm.js.map" />
+    <Content Include="Design\New Log In\LogIn\js\bootstrap.esm.min.js.map" />
+    <Content Include="Design\New Log In\LogIn\js\bootstrap.js.map" />
+    <Content Include="Design\New Log In\LogIn\js\bootstrap.min.js.map" />
+    <Content Include="Design\Reg New\js1\bootstrap.bundle.js.map" />
+    <Content Include="Design\Reg New\js1\bootstrap.bundle.min.js.map" />
+    <Content Include="Design\Reg New\js1\bootstrap.esm.js.map" />
+    <Content Include="Design\Reg New\js1\bootstrap.esm.min.js.map" />
+    <Content Include="Design\Reg New\js1\bootstrap.js.map" />
+    <Content Include="Design\Reg New\js1\bootstrap.min.js.map" />
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile2.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

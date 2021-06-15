@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
@@ -16,13 +12,39 @@ namespace Differentiation
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //    ddlbatch();
             if (!IsPostBack)
             {
+                if (ECUD.Time() == false)
+                {
+                    Response.Redirect("~/default.aspx");
+                }
+                if (Session["id"]==null && Session["id"] == Session["isAdmin"])
+                {
+                    Response.Redirect("~/LogIn.aspx");
+                }
+                AddToDataBase.Enabled = DesiresCount() < 5;
                 grid();
             }           
         }
-        public bool DesiresEmpty()
+        public bool NoRepeatedDesires()
+        {
+            SqlCommand cmd;
+            cmd = new SqlCommand("Select COUNT(Factuly_Id) FROM Desires group by Factuly_Id " +
+                "having Count(Factuly_Id)>1 ", con);
+            con.Open();
+            int count = Convert.ToInt32(cmd.ExecuteScalar());
+            con.Close();
+            if (count >= 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
+        }
+        public int DesiresCount()
         {
             int count = 1;
             long stdId = long.Parse(Session["id"].ToString());
@@ -36,35 +58,23 @@ namespace Differentiation
                 count = Convert.ToInt32(cmd.ExecuteScalar());
                 con.Close();
             }
-            if (count <=5)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            return count;
         }
         protected void ChkSelect_CheckedChanged(object sender, EventArgs e)
         {
             selectrow();
             bindgrid();
-
         }
         protected void grid()
         {
-            //long stdId = long.Parse(Session["id"].ToString());
-
             con.Open();
             SqlDataAdapter ds = new SqlDataAdapter(
                 "select Factuly.Factuly_Id, Factuly.Factuly_Name, " +
                 "Factuly.Min_Mark_Total, University.[University_Name]" +
-                " from Factuly , University where University.University_Id=Factuly.University_Id", con);
+                " from Factuly , University" +
+                " where University.University_Id=Factuly.University_Id " +
+                "and Factuly.Min_Mark_Total<=(select Mark_Total from Mark" +
+                " where Id_Number = ('" + Session["id"].ToString() + "'))", con);
             DataTable dt = new DataTable();
             ds.Fill(dt);
             GridView1.DataSource = dt;
@@ -76,7 +86,6 @@ namespace Differentiation
             DataTable dt = (DataTable)ViewState["GetRecords"];
             GridView2.DataSource = dt;
             GridView2.DataBind();
-
         }
         private DataTable createtable()
         {
@@ -112,7 +121,6 @@ namespace Differentiation
                 dt.AcceptChanges();
             }
             return dt;
-
         }
         private void selectrow()
         {
@@ -122,31 +130,28 @@ namespace Differentiation
                     dt = (DataTable)ViewState["GetRecords"];
                 else
                     dt = createtable();
-            //if (dt.Rows.Count == 5)
-            //    return;
-
             for (int i = 0; i < GridView1.Rows.Count; i++)
             {
                 CheckBox chk = (CheckBox)GridView1.Rows[i].Cells[0].FindControl("ChkSelect");
-                if (chk.Checked)
+                if (chk.Checked )
                 {
                     dt = AddRow(GridView1.Rows[i], dt);
-                    //AddToDataBase.Enabled = true;
-
                 }
                 else
                 {
                     dt = remove(GridView1.Rows[i], dt);
                     AddToDataBase.Enabled = true;
+                    Label3.Text = " ";
+
                 }
             }
-
-            if (dt.Rows.Count == 5)
+            var count = dt.Rows.Count + DesiresCount();
+            if (count >= 6)
+            {
                 AddToDataBase.Enabled = false;
-
+                Label3.Text = "لقد أدخلت الحد الاعلى من الرغبات";
+            }
             ViewState["GetRecords"] = dt;                        
-
-
         }
         protected void AddToDataBase_Click1(object sender, EventArgs e)
         {
@@ -155,58 +160,54 @@ namespace Differentiation
                 Response.Redirect("~/login.aspx");
             }
             long stdId = long.Parse(Session["id"].ToString());
-            int i = 1;
+            int i = DesiresCount() + 1;
 
-            //foreach
             foreach (GridViewRow gr in GridView2.Rows)
             {
-
-                string sqlquery = "insert into Desires values " +
-                    "(@Factuly_Id,@Id_Number,@Desire_Sequence)";
-                SqlCommand command = new SqlCommand(sqlquery, con);
-                command.Parameters.AddWithValue("@Factuly_Id", gr.Cells[0].Text);
-                command.Parameters.AddWithValue("@Id_Number", stdId);
-                command.Parameters.AddWithValue("@Desire_Sequence", i++);
-                con.Open();
-                command.ExecuteNonQuery();
-                con.Close();
-                Label1.Text = "تم الحفظ";
+                
+                    string sqlquery = "insert into Desires values " +
+                        "(@Factuly_Id,@Id_Number,@Desire_Sequence,@Accepted)";
+                    SqlCommand command = new SqlCommand(sqlquery, con);
+                    command.Parameters.AddWithValue("@Factuly_Id", gr.Cells[0].Text);
+                    command.Parameters.AddWithValue("@Id_Number", stdId);
+                    command.Parameters.AddWithValue("@Desire_Sequence", i++);
+                    command.Parameters.AddWithValue("@Accepted", 0);
+                    con.Open();
+                if (NoRepeatedDesires() == false)
+                {
+                    if (ECUD.Time() == false)
+                    {
+                        Response.Redirect("~/default.aspx");
+                        command.ExecuteNonQuery();
+                        Label1.Text = "تم الحفظ";
+                        con.Close();
+                    }                    
+                }
+                else
+                {
+                    Label2.Text = "هناك كلية مكررة راجع ذلك";
+                }
             }
-                
-
-
-                
-            
+          
         }
-
         protected void ShowDisers_Click1(object sender, EventArgs e)
         {
             Response.Redirect("~/ShowDesired.aspx");
         }
-
         protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             GridView1.PageIndex = e.NewPageIndex;
             grid();
         }
+        protected void Logout_Click(object sender, EventArgs e)
+        {
+            Int64? sessionId = Convert.ToInt64(Session["id"]);
+            sessionId = null;
+            Response.Redirect("~/default.aspx");
+        }
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-        //public void ddlbatch()
-        //{
-        //    conStr = ConfigurationManager.ConnectionStrings["University1"].ConnectionString;
-        //    con = new SqlConnection(conStr);
-
-        //    SqlCommand cmd1 = new SqlCommand("Select University_Name from University", con);
-        //    cmd1.CommandType = CommandType.Text;
-        //    cmd1.Connection = con;
-        //    con.Open();
-
-        //    ddlbatchno.DataSource = cmd1.ExecuteReader();
-        //    ddlbatchno.DataTextField = "University_Name";
-        //    ddlbatchno.DataBind();
-        //    con.Close();
-        //    ddlbatchno.Items.Insert(0, new ListItem("--Select University_Name no--", "0"));
-        //}
-
-
+        }
     }
 }

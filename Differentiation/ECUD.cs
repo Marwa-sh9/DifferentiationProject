@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using Differentiation.DAL;
 using System.Data.SqlClient;
 using System.Configuration;
-using System.Data;
 
 namespace Differentiation
 {
@@ -14,6 +11,7 @@ namespace Differentiation
         public int Factuly_Id { get; set; }
         public int Desire_Id { get; set; }
         public string Factuly_Name { get; set; }
+        public string Accepted { get; set; }
 
     }
     public class DataStudent
@@ -37,7 +35,7 @@ namespace Differentiation
         public int Arabic { get; set; }
         public int National { get; set; }
         public int Religious { get; set; }
-        public int Sciences { get; set; }
+        public int Science { get; set; }
         public int Mark_Total { get; set; }
 
 
@@ -45,24 +43,19 @@ namespace Differentiation
     }
     public class ECUD
     {
+       // لجلب جميع الرغبات المخزنة في الداتا وتبعئتها في حقول الجدول
         public static List<Desired> GetAllDesires(long stdId)
         {
             List<Desired> listDes = new List<Desired>();
             string cs = ConfigurationManager.ConnectionStrings["University1"].ToString();
             using (SqlConnection con = new SqlConnection(cs))
             {
-                // int StdID=Convert.ToInt32(Application["IdStd"]);
-                //int? sessionId = Convert.ToInt32(Session["id"]);
-                //if (sessionId == StdID)
-                //{
                 SqlCommand cmd = new SqlCommand(
-                    "select d.Factuly_Id,d.Desire_Sequence,a.Factuly_Name" +
+                    "select d.Factuly_Id,d.Desire_Sequence,d.Accepted,a.Factuly_Name" +
                     " from Desires d,Factuly a" +
                     " where d.Factuly_Id=a.Factuly_Id and Id_Number=@id" +
                     " order by d.Desire_Sequence;", con);
                 cmd.Parameters.Add(new SqlParameter("id", stdId));
-
-                //}
                 con.Open();
                 SqlDataReader rd = cmd.ExecuteReader();
                 while (rd.Read())
@@ -71,35 +64,29 @@ namespace Differentiation
                     desired.Factuly_Id = Convert.ToInt32(rd["Factuly_Id"]);
                     desired.Desire_Id = Convert.ToInt32(rd["Desire_Sequence"]);
                     desired.Factuly_Name = Convert.ToString(rd["Factuly_Name"]);
-
+                    desired.Accepted = Convert.ToString(rd["Accepted"]);
                     listDes.Add(desired);
 
                 }
-
-
             }
             return listDes;
         }
+        //جلب جميع معلومات الطالب المراد عرضها في الجدول
         public static List<DataStudent> GetAllStdData(long stdId)
         {
             List<DataStudent> listDatastd = new List<DataStudent>();
             string cs = ConfigurationManager.ConnectionStrings["University1"].ToString();
             using (SqlConnection con = new SqlConnection(cs))
             {
-                // int StdID=Convert.ToInt32(Application["IdStd"]);
-                //int? sessionId = Convert.ToInt32(Session["id"]);
-                //if (sessionId == StdID)
-                //{
                 SqlCommand cmd = new SqlCommand(
                     "select ds.Id_Number,ds.IPO_Number,ds.Student_Full_Name" +
                     ",ds.Student_Mother_Name,ds.Gender,ds.Date_Of_Birth" +
                     ",ds.Student_Nationality,ds.year,ds.Source,ds.Address,ds.Phone" +
                     ",M.Maths,M.physics,M.chemistry,M.English,M.French,M.Arabic,M.[National]" +
-                    ",M.Religious,M.Sciences,M.Mark_Total " +
+                    ",M.Religious,M.Science,M.Mark_Total " +
                     " from Student_Imported_Data ds , Mark M" +
                     " where ds.Id_Number = M.Id_Number and ds.Id_Number=@id ;", con);
                 cmd.Parameters.Add(new SqlParameter("id", stdId));
-                //}
                 con.Open();
                 SqlDataReader rd = cmd.ExecuteReader();
                 while (rd.Read())
@@ -124,18 +111,14 @@ namespace Differentiation
                     dataStudent.Arabic = Convert.ToInt32(rd["Arabic"]);
                     dataStudent.National = Convert.ToInt32(rd["National"]);
                     dataStudent.Religious = Convert.ToInt32(rd["Religious"]);
-                    dataStudent.Sciences = Convert.ToInt32(rd["Sciences"]);
+                    dataStudent.Science = Convert.ToInt32(rd["Science"]);
                     dataStudent.Mark_Total = Convert.ToInt32(rd["Mark_Total"]);
-
-
                     listDatastd.Add(dataStudent);
-
                 }
-
-
             }
             return listDatastd;
         }
+        //ميثود لحذف الرغبة المراد حذفها من جدول الرغبات
         public static void Delete(int Factuly_Id)
         {
             string cs = ConfigurationManager.ConnectionStrings["University1"].ToString();
@@ -146,12 +129,11 @@ namespace Differentiation
                 cmd.Parameters.Add(param);
                 con.Open();
                 cmd.ExecuteNonQuery();
-
             }
         }
+        //تعديل ترتيب الرغبة الموحودة في الجدول
         public static int Update(int Factuly_Id ,string Desire_Id)
         {
-
             string cs = ConfigurationManager.ConnectionStrings["University1"].ToString();
             using (SqlConnection con = new SqlConnection(cs))
             {
@@ -164,10 +146,22 @@ namespace Differentiation
                 cmd.Parameters.Add(DesID);
                 con.Open();
                 return cmd.ExecuteNonQuery();
-
-
             }
         }
-
+        //لبداية فتح الصفحات و تسكريها
+        public static bool Time()
+        {
+            DateTime NowDate = DateTime.Now;
+            DateTime StartDate = DateTime.Parse("06/13/2021");
+            DateTime EndDate = DateTime.Parse("09/01/2021");
+            if (NowDate.Date >= StartDate.Date && NowDate.Date <= EndDate.Date)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

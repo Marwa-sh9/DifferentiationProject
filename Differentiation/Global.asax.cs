@@ -42,7 +42,7 @@ namespace Differentiation
             var Admin1 = dal.SelectData("SELECT * FROM Student_Imported_Data");
             if (Admin1.Rows.Count == 0)
             {
-                dal.ExecuteCommand("Insert Into Student_Imported_Data Values(11234567,1555,'Admin','Adm','Female','11/08/1999','syr',2021,1,'syr','syr','096','Admin123@def.un','Admin123', 1)");
+                dal.ExecuteCommand("Insert Into Student_Imported_Data Values(11234567,1555,'Admin','Adm','Female','11/08/1999','syr',2021,'syr','syr','09622','Admin123@def.un','Admin123', 1)");
             }
 
             //حفظ جلسة الادمن
