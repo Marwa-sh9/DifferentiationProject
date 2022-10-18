@@ -44,23 +44,11 @@ namespace Differentiation
             {
                 dal.ExecuteCommand("Insert Into Student_Imported_Data Values(11234567,1555,'Admin','Adm','Female','11/08/1999','syr',2021,'syr','syr','09622','Admin123@def.un','Admin123', 1)");
             }
-
-            //حفظ جلسة الادمن
-            //var adm = dal.SelectData("select Id_Number from Student_Imported_Data where Id_Number=11234567");
-            //var rowadm = adm.Rows[0][0];
-            //Application["adm"] = rowadm;
-            
-            ////
-            //var Std = dal.SelectData("select Id_Number from Student_Imported_Data where Id_Number <> 11234567 ");
-            //if (Std.Rows.Count > 0)
+            //var language = dal.SelectData("select * from ");
+            //if(language.Rows.Count==0)
             //{
-            //    var RowStd = Std.Rows[0][0];
-            //    Application["IdStd"] = RowStd;
+            //    dal.ExecuteCommand("insert into values()");
             //}
-            //else
-            //{
-            //}
-
 
             dal.Close();
         }

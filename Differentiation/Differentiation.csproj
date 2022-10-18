@@ -72,6 +72,9 @@
     <Content Include="AddStudentData.aspx" />
     <Content Include="default.aspx" />
     <Content Include="Design\AddStudentData\StyleSheet1.css" />
+    <Content Include="Design\AddStudent\bootstrap-icons.css" />
+    <Content Include="Design\AddStudent\bootstrap.css" />
+    <Content Include="Design\AddStudent\Text.css" />
     <Content Include="Design\Content\bootstrap-theme.css" />
     <Content Include="Design\Content\bootstrap-theme.min.css" />
     <Content Include="Design\Content\bootstrap.css" />
@@ -183,6 +186,7 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddStudentData.aspx.cs">
@@ -232,6 +236,13 @@
     </Compile>
     <Compile Include="ShowDesired.aspx.designer.cs">
       <DependentUpon>ShowDesired.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

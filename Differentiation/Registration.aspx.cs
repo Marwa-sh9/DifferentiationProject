@@ -64,7 +64,8 @@ namespace Differentiation
             SqlDataAdapter sda = null;
             DataTable Dt = new DataTable();
             con = new SqlConnection(conStr);
-            cmd = new SqlCommand("Select Id_Number FROM Student_Imported_Data WHERE Id_Number =@txtID_Number", con);
+            cmd = new SqlCommand("Select Id_Number FROM Student_Imported_Data " +
+                                 "WHERE Id_Number =@txtID_Number", con);
             con.Open();
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("@txtID_Number", SqlDbType.VarChar).Value = txtID_Number.Text;
@@ -85,7 +86,8 @@ namespace Differentiation
             SqlDataAdapter sda = null;
             DataTable Dt = new DataTable();
             con = new SqlConnection(conStr);
-            cmd = new SqlCommand("Select IPO_Number FROM Student_Imported_Data WHERE IPO_Number =@txtIPO_Number", con);
+            cmd = new SqlCommand("Select IPO_Number FROM Student_Imported_Data" +
+                                 " WHERE IPO_Number =@txtIPO_Number", con);
             con.Open();
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("@txtIPO_Number", SqlDbType.VarChar).Value = txtIPO_Number.Text;

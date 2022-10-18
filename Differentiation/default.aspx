@@ -19,7 +19,7 @@
                          <div style="height: 30px; width:auto; background-color:skyblue;">
         <marquee direction="right" onmouseover="this.stop()" onmouseout="this.start()">
           <asp:Label ID="lblMarquee" runat="server"
-              Text="المفاضلة الجامعية 2020 تبدأ 1/8/2021 وتنتهي في التاريخ 1/9/2020"></asp:Label>
+              Text="المفاضلة الجامعية 2023/2022 تبدأ 30/8/2022 وتنتهي في التاريخ 1/10/2022"></asp:Label>
         </marquee>
       </div>
      <div>

@@ -3,7 +3,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
-
+using Differentiation.DAL;
 namespace Differentiation
 {
     public partial class FactulyAdd : System.Web.UI.Page
@@ -18,23 +18,59 @@ namespace Differentiation
                 {
                     Response.Redirect("~/default.aspx");
                 }
-                if (Session["id"]==null && Session["id"] == Session["isAdmin"])
+                if (Session["id"] == null && Session["id"] == Session["isAdmin"])
                 {
                     Response.Redirect("~/LogIn.aspx");
                 }
+                if(NoRepeatedDesires()==true)
+                {
+                    Label5.Text = "تم اختيار اللغة سابقا ";
+                    Langauge1.Enabled = false;
+                    DropDownList1.Enabled = false;
+                    Label6.Text = " ";
+                    grid();
+                }
+                Disable();
+                Def_Language();
                 AddToDataBase.Enabled = DesiresCount() < 5;
-                grid();
-            }           
+            }
+        }
+        protected void Def_Language()
+        {
+            DataAccessLayer dal = new DataAccessLayer();
+            dal.Open();
+            var lan = dal.SelectData(
+                " select M.mark_Id, M.English,M.French," +
+                " ds.Id_Number," +
+                " F.Factuly_Id" +
+                " from Mark M ,Student_Imported_Data ds,Factuly F" +
+                " where M.mark_Id=F.Factuly_Id" +
+                " and ds.Id_Number=('" + Session["id"].ToString() + "') " +
+                " and M.Id_Number= ('" + Session["id"] + "')");
+
+            //DropDownList1.DataSource = lan;
+            //DropDownList1.DataTextField = "English";
+            //DropDownList1.DataTextField = "French";
+
+            DropDownList1.Items.Add(lan.Rows[0]["English"].ToString());
+            DropDownList1.Items.Add(lan.Rows[0]["French"].ToString());
+            DropDownList1.DataBind();
+            dal.Close();
+            Enable();
         }
         public bool NoRepeatedDesires()
         {
-            SqlCommand cmd;
-            cmd = new SqlCommand("Select COUNT(Factuly_Id) FROM Desires group by Factuly_Id " +
-                "having Count(Factuly_Id)>1 ", con);
+            DataTable dt = new DataTable();
             con.Open();
-            int count = Convert.ToInt32(cmd.ExecuteScalar());
+           SqlCommand cmd = new SqlCommand("Select Choosing_Lang FROM Mark " +
+               "where Choosing_Lang is not null " +
+               "and Id_Number='"+Session["id"].ToString()+"'", con);
+            cmd.CommandType = CommandType.Text;
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            sda.Fill(dt);
+            int count = dt.Rows.Count;
             con.Close();
-            if (count >= 1)
+            if (count == 1)
             {
                 return true;
             }
@@ -42,14 +78,38 @@ namespace Differentiation
             {
                 return false;
             }
-            
+        }
+        protected void Language_Click1(object sender, EventArgs e)
+        {
+            DataAccessLayer dal = new DataAccessLayer();
+            string Language = this.DropDownList1.SelectedValue;
+            dal.Open();
+            dal.ExecuteCommand($"UPDATE Mark SET Choosing_Lang = '{Language}'" +
+                $"  WHERE Id_Number = {Session["id"].ToString()} ");
+            dal.Close();
+            Label5.Text = "تم ازالة اللغة المحددة من المجموع +'" + Language + "'";
+            Enable();
+            Langauge1.Enabled = false;
+            DropDownList1.Enabled = false;
+            grid();
+        }
+        void Disable()
+        {
+            GridView1.Enabled = false;
+            AddToDataBase.Enabled = false;
+        }
+        void Enable()
+        {
+            GridView1.Enabled = true;
+            AddToDataBase.Enabled = true;
         }
         public int DesiresCount()
         {
             int count = 1;
             long stdId = long.Parse(Session["id"].ToString());
             string conString = ConfigurationManager.ConnectionStrings["University1"].ConnectionString;
-            SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Desires Where Id_Number =@id");
+            SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Desires" +
+                " Where Id_Number =@id");
             cmd.Parameters.Add(new SqlParameter("id", stdId));
             using (SqlConnection con = new SqlConnection(conString))
             {
@@ -68,13 +128,18 @@ namespace Differentiation
         protected void grid()
         {
             con.Open();
+            //string Language = RadioButtonList1.DataTextField;
+            //+('" + Language + "')
             SqlDataAdapter ds = new SqlDataAdapter(
                 "select Factuly.Factuly_Id, Factuly.Factuly_Name, " +
                 "Factuly.Min_Mark_Total, University.[University_Name]" +
                 " from Factuly , University" +
                 " where University.University_Id=Factuly.University_Id " +
-                "and Factuly.Min_Mark_Total<=(select Mark_Total from Mark" +
-                " where Id_Number = ('" + Session["id"].ToString() + "'))", con);
+                " and Factuly.Factuly_Id not in (select Factuly_Id from Desires where Id_Number = '" + Session["id"].ToString() + "')" +
+                " and Factuly.Min_Mark_Total<=(select Mark_Total-(Religious+Choosing_Lang)from Mark" +
+                " where Id_Number = ('" + Session["id"].ToString() + "'))" +
+                " order by Factuly.Min_Mark_Total desc", con);
+            
             DataTable dt = new DataTable();
             ds.Fill(dt);
             GridView1.DataSource = dt;
@@ -126,7 +191,6 @@ namespace Differentiation
         {
              DataTable dt;
                 if (ViewState["GetRecords"] != null)
-
                     dt = (DataTable)ViewState["GetRecords"];
                 else
                     dt = createtable();
@@ -142,7 +206,7 @@ namespace Differentiation
                     dt = remove(GridView1.Rows[i], dt);
                     AddToDataBase.Enabled = true;
                     Label3.Text = " ";
-
+                    Label4.Text = " ";
                 }
             }
             var count = dt.Rows.Count + DesiresCount();
@@ -159,36 +223,28 @@ namespace Differentiation
             {
                 Response.Redirect("~/login.aspx");
             }
+            if (ECUD.Time() == false)
+            {
+                Response.Redirect("~/default.aspx");
+            }
             long stdId = long.Parse(Session["id"].ToString());
             int i = DesiresCount() + 1;
 
             foreach (GridViewRow gr in GridView2.Rows)
             {
-                
-                    string sqlquery = "insert into Desires values " +
-                        "(@Factuly_Id,@Id_Number,@Desire_Sequence,@Accepted)";
-                    SqlCommand command = new SqlCommand(sqlquery, con);
-                    command.Parameters.AddWithValue("@Factuly_Id", gr.Cells[0].Text);
-                    command.Parameters.AddWithValue("@Id_Number", stdId);
-                    command.Parameters.AddWithValue("@Desire_Sequence", i++);
-                    command.Parameters.AddWithValue("@Accepted", 0);
-                    con.Open();
-                if (NoRepeatedDesires() == false)
-                {
-                    if (ECUD.Time() == false)
-                    {
-                        Response.Redirect("~/default.aspx");
-                        command.ExecuteNonQuery();
-                        Label1.Text = "تم الحفظ";
-                        con.Close();
-                    }                    
-                }
-                else
-                {
-                    Label2.Text = "هناك كلية مكررة راجع ذلك";
-                }
+                string sqlquery = "insert into Desires values " +
+                                  "(@Factuly_Id,@Id_Number,@Desire_Sequence,@Accepted)";
+                SqlCommand command = new SqlCommand(sqlquery, con);
+                command.Parameters.AddWithValue("@Factuly_Id", gr.Cells[0].Text);
+                command.Parameters.AddWithValue("@Id_Number", stdId);
+                command.Parameters.AddWithValue("@Desire_Sequence", i++);
+                command.Parameters.AddWithValue("@Accepted", 0);
+                con.Open();
+                command.ExecuteNonQuery();
+                Label1.Text = "تم الحفظ";
+                con.Close();
             }
-          
+
         }
         protected void ShowDisers_Click1(object sender, EventArgs e)
         {
@@ -209,5 +265,6 @@ namespace Differentiation
         {
 
         }
+       
     }
 }

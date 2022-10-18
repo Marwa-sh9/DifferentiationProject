@@ -13,12 +13,10 @@ namespace Differentiation
         protected void Page_Load(object sender, EventArgs e)
         {
           //  long Id = long.Parse(Session["id"].ToString());
-            // var isAdmin = bool.Parse(Session["isAdmin"].ToString());
+           // var isAdmin = bool.Parse(Session["isAdmin"].ToString());
             if ( Session["id"] == null)
                 Response.Redirect("~/LogIn.aspx");
-
         }
-
         //public static string pathM = @"C:\Users\Marwa\Desktop\Mark.xlsx";
         //public static string connstrM = string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + pathM + ";Extended Properties=Excel 12.0");
         //DataSet dsM;
@@ -42,7 +40,6 @@ namespace Differentiation
             //bulkinsert.WriteToServer(dr);
             //oledbcon.Close();
             HttpPostedFile postedfile = FileUploadMark.PostedFile;
-
             string FileName = Path.GetFileName(postedfile.FileName);
             string FileEx = Path.GetExtension(FileName);
             if (FileEx.ToLower() == ".csv")
@@ -63,12 +60,8 @@ namespace Differentiation
                 new DataColumn("ID_Number",typeof(Int64)),//11
 
                 });
-
-
                 string csvPath = Server.MapPath("~/" + FileUploadMark.FileName.ToString());
-
                 FileUploadMark.SaveAs(csvPath);
-
                 try
                 {
                     using (TextFieldParser textFieldParser = new TextFieldParser(csvPath))
@@ -110,9 +103,7 @@ namespace Differentiation
                 Label2.Text = ("Student Mark Added Successfully!");
                 //Response.Write("Factulies Added Successfully!");
             }
-
         }
-
         //public static string pathF = @"C:\Users\Marwa\Desktop\FactuliesS.xlsx";
         //public static string connstrF = string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + pathM + ";Extended Properties=Excel 12.0");
         //DataSet dsF;
@@ -131,8 +122,6 @@ namespace Differentiation
                 new DataColumn("Min_Mark_Total",typeof(int)),//3
                 new DataColumn("University_ID",typeof(int)),//4
                 });
-
-
                 string csvPath = Server.MapPath("~/" + FileUploadFactuly.FileName.ToString());
 
                 FileUploadFactuly.SaveAs(csvPath);
@@ -178,8 +167,6 @@ namespace Differentiation
                 Label3.Text = ("Factulies Added Successfully!");
                 //Response.Write("Factulies Added Successfully!");
             }
-
-
             ////DataSet dsF;
             ////string PathF = Server.MapPath("~/" + FileUploadFactuly.FileName.ToString());
             ////string connstrF = string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + PathF + ";Extended Properties=Excel 12.0");
@@ -195,7 +182,6 @@ namespace Differentiation
             //bulkinsert.DestinationTableName ="Factuly";
             //bulkinsert.WriteToServer(dr);
             //oledbcon.Close();
-
 
         }
 
@@ -224,15 +210,9 @@ namespace Differentiation
                     new DataColumn("Phone",typeof(string)),//11
                     new DataColumn("Email",typeof(string)),//12
                     new DataColumn("PassWord",typeof(string)),//13
-
-
                     });
-
-
                 string csvPath = Server.MapPath("~/" + FileUploadStudent.FileName.ToString());
-
                 FileUploadStudent.SaveAs(csvPath);
-
                 try
                 {
                     using (TextFieldParser textFieldParser = new TextFieldParser(csvPath))
@@ -240,7 +220,6 @@ namespace Differentiation
                         textFieldParser.SetDelimiters(new string[] { "," });
                         textFieldParser.HasFieldsEnclosedInQuotes = true;
                         string[] columns = textFieldParser.ReadFields();
-
                         while (!textFieldParser.EndOfData)
                         {
                             string[] fieldData = textFieldParser.ReadFields();
@@ -306,16 +285,12 @@ namespace Differentiation
                 cmd.CommandType = CommandType.StoredProcedure;
                 con.Close();
             }
-
         }
-
         protected void Logout_Click(object sender, EventArgs e)
         {
             Int64? sessionId = Convert.ToInt64(Session["id"]);
             sessionId = null;
             Response.Redirect("~/default.aspx");
         }
-
-
     }
 }

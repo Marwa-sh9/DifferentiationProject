@@ -10,7 +10,8 @@
     <title>Factuly Add</title>
 </head>
 <body style="background-attachment:fixed;background-size:1540px 850px;
-             background-repeat:no-repeat;background-position:center;background-image:linear-gradient(white,teal)">
+             background-repeat:no-repeat;background-position:center;
+             background-image:linear-gradient(white,teal)">
     <form id="form1" runat="server">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
        <a id="n1" class="navbar-brand" href="#" style="margin-right:10px;">
@@ -20,15 +21,30 @@
   <div id="div1" class="container-fluid">
     <a class="navbar-brand" href="default.aspx">Home</a>
       <ul class="navbar-nav me-auto mb-2 mb-auto">
-          <asp:Button ID="Logout" runat="server" Text="Logout" CssClass="btn btn-danger bt-md" Style="margin-left:840px;" OnClick="Logout_Click" />
+          <asp:Button ID="Logout" runat="server" Text="Logout" 
+              CssClass="btn btn-danger bt-md" Style="margin-left:840px;" OnClick="Logout_Click" />
     </ul>
   </div>
 </nav>
         <center>
         <div style="padding-top:90px">
         </div>
+        <asp:Label ID="Label6" runat="server" ForeColor="Red" Text="اختر علامة اللغة التي تريد ازالتها من المجموع اللغة الأجنبية ام الفرنسية"></asp:Label>
+      <br />
+      <asp:DropDownList ID="DropDownList1"  runat="server">
+       </asp:DropDownList>
+            <br />
+            <asp:Button ID="Langauge1" runat="server" Text="حفظ اللغة" class="btn btn-primary"
+             OnClick="Language_Click1" Height="37px" Width="217px" /><br />
+            <asp:Label ID="Label5" runat="server" ForeColor="Red" Text=" "></asp:Label>
         <div>
-            <asp:GridView ID="GridView1" AllowPaging="True" CellPadding="4" PageSize="10" runat="server" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" AutoGenerateColumns="False" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" Width="675px" OnPageIndexChanging="GridView1_PageIndexChanging">
+            <br />
+            <br />
+            <asp:GridView ID="GridView1" AllowPaging="True" CellPadding="4" PageSize="10"
+                runat="server" OnSelectedIndexChanged="GridView1_SelectedIndexChanged"
+                AutoGenerateColumns="False" BackColor="White" BorderColor="#CC9966" 
+                BorderStyle="None" BorderWidth="1px" Width="675px" 
+                OnPageIndexChanging="GridView1_PageIndexChanging">
                 <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />
                 <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="#FFFFCC" />
                 <PagerStyle BackColor="#FFFFCC" ForeColor="#330099" HorizontalAlign="Center" />
@@ -41,7 +57,8 @@
                 <Columns>
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:CheckBox ID="ChkSelect"  runat="server" OnCheckedChanged="ChkSelect_CheckedChanged" AutoPostBack="true" />
+                            <asp:CheckBox ID="ChkSelect"  runat="server" 
+                                OnCheckedChanged="ChkSelect_CheckedChanged" AutoPostBack="true" />
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:BoundField  HeaderText="رمز الرغبة" DataField="Factuly_Id" />
@@ -51,7 +68,10 @@
                 </Columns>
             </asp:GridView>
             <br />
-            <asp:GridView ID="GridView2" AutoGenerateColumns="false" EmptyDataText="لم يضاف رغبات بعد" runat="server" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="4" Width="673px">
+            <asp:GridView ID="GridView2" AutoGenerateColumns="false" 
+                EmptyDataText="لم يضاف رغبات بعد" runat="server" BackColor="White"
+                BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="4" 
+                Width="673px">
                 <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />
                 <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="#FFFFCC" />
                 <PagerStyle BackColor="#FFFFCC" ForeColor="#330099" HorizontalAlign="Center" />
@@ -69,18 +89,19 @@
                 </Columns>
             </asp:GridView>
             <br />
+            <asp:Label ID="Label4" ForeColor="Red" runat="server" Text=""></asp:Label>
             <asp:Label ID="Label3" ForeColor="Red" runat="server" Text=""></asp:Label>
-
-            <br />
            <asp:Label ID="Label2" ForeColor="Red" runat="server" Text=""></asp:Label>
 
             <br />
-         <asp:Button ID="AddToDataBase" runat="server" Text="حفظ الرغبات" class="btn btn-primary" OnClick="AddToDataBase_Click1" Height="37px" Width="217px" />
+         <asp:Button ID="AddToDataBase" runat="server" Text="حفظ الرغبات" class="btn btn-primary"
+             OnClick="AddToDataBase_Click1" Height="37px" Width="217px" />
             <asp:Label ID="Label1" ForeColor="Red" runat="server" Text=""></asp:Label>
             <br />
             <br />
-                     <asp:Button ID="ShowDisers" runat="server" Text="عرض الرغبات" class="btn btn-primary"  BackColor="#990000" OnClick="ShowDisers_Click1" Height="37px" Width="217px" />
-
+                     <asp:Button ID="ShowDisers" runat="server" Text="عرض الرغبات" 
+                         class="btn btn-primary"  BackColor="#990000" OnClick="ShowDisers_Click1" 
+                         Height="37px" Width="217px" />
         </div>
             </center>
     </form>

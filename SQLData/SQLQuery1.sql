@@ -42,15 +42,9 @@ Arabic int not null,
 [National] int not null,
 Religious int not null,
 Science int not null,
-Mark_Total int,
+Mark_Total int not null,
 Id_Number bigint foreign key references Student_Imported_Data(Id_Number),
-);
-create table Factuly_mark
-(
-Factuly_Id int foreign key references Factuly(Factuly_Id),
-mark_Id int foreign key references Mark(mark_Id),
-Min_Mark_Total int,
-Def_Language nvarchar(25),
+Choosing_Lang nvarchar(10),
 );
 create table Desires
 (

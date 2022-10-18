@@ -79,14 +79,14 @@
                         <asp:Label ID="NameF1"  runat="server" Text='<%# Bind("Factuly_Name") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:TemplateField HeaderText="مقبول؟" InsertVisible="False" SortExpression="Accepted">
+               <%-- <asp:TemplateField HeaderText="مقبول؟" InsertVisible="False" SortExpression="Accepted">
                     <EditItemTemplate>
                         <asp:Label ID="Accepted1" runat="server" Text='<%# Bind("Accepted") %>'></asp:Label>
                     </EditItemTemplate>
                     <ItemTemplate>
                         <asp:Label ID="Accepted2"  runat="server" Text='<%# Bind("Accepted") %>'></asp:Label>
                     </ItemTemplate>
-                </asp:TemplateField>
+                </asp:TemplateField>--%>
             </Columns>
             <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
             <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />

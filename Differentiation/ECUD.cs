@@ -51,7 +51,7 @@ namespace Differentiation
             using (SqlConnection con = new SqlConnection(cs))
             {
                 SqlCommand cmd = new SqlCommand(
-                    "select d.Factuly_Id,d.Desire_Sequence,d.Accepted,a.Factuly_Name" +
+                    "select d.Factuly_Id,d.Desire_Sequence,a.Factuly_Name" +
                     " from Desires d,Factuly a" +
                     " where d.Factuly_Id=a.Factuly_Id and Id_Number=@id" +
                     " order by d.Desire_Sequence;", con);
@@ -64,7 +64,7 @@ namespace Differentiation
                     desired.Factuly_Id = Convert.ToInt32(rd["Factuly_Id"]);
                     desired.Desire_Id = Convert.ToInt32(rd["Desire_Sequence"]);
                     desired.Factuly_Name = Convert.ToString(rd["Factuly_Name"]);
-                    desired.Accepted = Convert.ToString(rd["Accepted"]);
+                   // desired.Accepted = Convert.ToString(rd["Accepted"]);
                     listDes.Add(desired);
 
                 }
@@ -152,8 +152,8 @@ namespace Differentiation
         public static bool Time()
         {
             DateTime NowDate = DateTime.Now;
-            DateTime StartDate = DateTime.Parse("06/13/2021");
-            DateTime EndDate = DateTime.Parse("09/01/2021");
+            DateTime StartDate = DateTime.Parse("06/13/2022");
+            DateTime EndDate = DateTime.Parse("10/01/2022");
             if (NowDate.Date >= StartDate.Date && NowDate.Date <= EndDate.Date)
             {
                 return true;

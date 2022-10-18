@@ -10,10 +10,10 @@ namespace Differentiation
         {
             if (!IsPostBack)
             {
-                if (ECUD.Time() == false)
-                {
-                    Response.Redirect("~/default.aspx");
-                }
+                //if (ECUD.Time() == false)
+                //{
+                //    Response.Redirect("~/default.aspx");
+                //}
             }
         }
 
