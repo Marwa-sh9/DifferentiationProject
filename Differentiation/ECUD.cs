@@ -153,7 +153,7 @@ namespace Differentiation
         {
             DateTime NowDate = DateTime.Now;
             DateTime StartDate = DateTime.Parse("06/13/2022");
-            DateTime EndDate = DateTime.Parse("10/01/2022");
+            DateTime EndDate = DateTime.Parse("10/01/2025");
             if (NowDate.Date >= StartDate.Date && NowDate.Date <= EndDate.Date)
             {
                 return true;
